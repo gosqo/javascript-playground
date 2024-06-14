@@ -1,6 +1,8 @@
 // helloVong(); // TypeError: helloVong is not a function
 // arrowFunc(); // TypeError: arrowFunc is not a function
 
+// setTimeout(helloVongCallback, 2000); // TypeError [ERR_INVALID_ARG_TYPE]: The "callback" argument must be of type function. Received undefined
+
 console.log(helloVong); // undefined
 console.log(arrowFunc); // undefined
 
@@ -11,6 +13,12 @@ var helloVong = function () {
 var arrowFunc = () => {
     console.log('Hello Arrow.');
 }
+
+var helloVongCallback = function () {
+    console.log('Hello Vong callback.');
+}
+
+const timeout = setTimeout(helloVongCallback, 2000);
 
 helloVong(); // Hello Vong.
 arrowFunc();
