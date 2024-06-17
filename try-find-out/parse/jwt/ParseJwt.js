@@ -20,7 +20,7 @@ function parseJwt(token) {
 }
 
 const randomJWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyYW5kb20iLCJuYW1lIjoidGVzdGluZyIsImlhdCI6MTcxODYxMDQ3OCwiZXhwIjoxNzE4NjEwNzAwfQ.MQWI75FZ1DhISHvFyaP3Iqa36Z0IjQnrqSTYMSFvps8';
-const parsedJWT = parseJwt(someRandomJWT);
+const parsedJWT = parseJwt(randomJWT);
 const jwtExpiration = parsedJWT.exp;
 const currentTimeStamp = Math.floor(Date.now() / 1000);
 
